@@ -1,2 +1,13 @@
 # Bears-Team-29
-Add-project-description-here | Voyage-7 | https://chingu.io/
+Simple eCommerce | Voyage-7 | https://chingu.io/
+
+#### Feature or function for eCommerce
+* Authentication
+   * Login
+   * Register
+* Add cart
+* Check out 
+* Shipping form
+* Admin
+    * manage product 
+    * manage categories
