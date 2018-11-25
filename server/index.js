@@ -2,6 +2,7 @@ const Koa = require('koa');
 const koaStatic = require('koa-static');
 
 const config = require('./config');
+require('./database');
 
 const app = new Koa();
 

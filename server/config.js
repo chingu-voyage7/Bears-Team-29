@@ -1,5 +1,7 @@
 const path = require('path');
-require('dotenv').config({path: path.join(__dirname, '../.env')});
+const dotenv = require('dotenv');
+
+dotenv.config({path: path.join(__dirname, '../.env')});
 
 const env =
   ['test', 'production', 'development', 'staging'].indexOf(
@@ -13,4 +15,9 @@ const port = process.env.APP_PORT || 2205;
 module.exports = {
   env,
   port,
+  database: {
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    name: process.env.DB_NAME,
+  },
 };
