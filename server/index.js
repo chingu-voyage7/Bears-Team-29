@@ -1,12 +1,5 @@
-const Koa = require('koa');
-const koaStatic = require('koa-static');
+require('babel-register')({
+  presets: ['env'],
+});
 
-const config = require('./config');
-require('./database');
-
-const app = new Koa();
-
-app.use(koaStatic('dist'));
-
-app.listen(config.port);
-console.log(`Server running on port ${config.port}`);
+module.exports = require('./src/app');
