@@ -12,6 +12,7 @@
     "start": "yarn client-build && node server/index.js"
   },
   "dependencies": {
+    "dotenv": "^6.1.0",
     "koa": "^2.6.2",
     "koa-static": "^5.0.0",
     "react": "^16.6.3",
