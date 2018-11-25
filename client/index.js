@@ -1,6 +1,5 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-
-const App = () => <span>eCommerce site</span>;
+import App from './src/App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
