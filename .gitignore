@@ -7,3 +7,6 @@ yarn-error.log*
 
 # parcel-bundler build output
 dist
+
+# Dependency directories
+node_modules
