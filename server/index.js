@@ -1,7 +1,8 @@
 const Koa = require('koa');
 const app = new Koa();
+const koaStatic = require('koa-static');
 
-app.use(async ctx => (ctx.body = 'Hello world'));
+app.use(koaStatic('dist'));
 
 console.log('Server running on port 2205');
 
