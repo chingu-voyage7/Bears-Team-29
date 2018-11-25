@@ -1,0 +1,9 @@
+# Logs
+*.log
+yarn-error.log*
+
+# parcel-bundler cache
+.cache
+
+# parcel-bundler build output
+dist
