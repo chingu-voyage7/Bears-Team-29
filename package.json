@@ -4,8 +4,12 @@
   "description": "eCommerse site clone build to learn project",
   "author": "Chingu-7 Bear-29 team",
   "scripts": {
+    "client-start": "parcel ./client/index.html",
+    "client-watch": "parcel watch ./client/index.html",
+    "client-build": "parcel build ./client/index.html",
     "server-watch": "nodemon server/index.js",
-    "client-watch": "parcel ./client/index.html"
+    "dev": "concurrently --kill-others \"yarn server-watch\" \"yarn client-watch\"",
+    "start": "yarn client-build && node server/index.js"
   },
   "dependencies": {
     "koa": "^2.6.2",
