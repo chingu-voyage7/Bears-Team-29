@@ -1,4 +1,8 @@
 {
+  "name": "eCommerce-site",
+  "version": "1.0.0",
+  "description": "eCommerse site clone build to learn project",
+  "author": "Chingu-7 Bear-29 team",
   "dependencies": {
     "koa": "^2.6.2",
     "react": "^16.6.3",
