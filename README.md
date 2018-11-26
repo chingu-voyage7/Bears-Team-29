@@ -37,14 +37,14 @@ Simple eCommerce | Voyage-7 | https://chingu.io/
 
 ### Running steps
 
-* Clone project
+1. Clone project
 
 Inside the project directory:
 
-* Create `.env` file base on `.env.example` and update your environment variables
+2. Create `.env` file base on `.env.example` and update your environment variables
 
-* Run `yarn` for install dependencies
+3. Run `yarn` for install dependencies
 
-* Run `yarn dev` for running project in development mode. Every changes on codes will be update immediately
+4. Run `yarn dev` for running project in development mode. Every changes on codes will be update immediately
 
-* Run `yarn start` for running project in production mode
+  Or `yarn start` for running project in production mode
