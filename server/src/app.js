@@ -8,5 +8,6 @@ const app = new Koa();
 
 app.use(koaStatic('dist'));
 
-app.listen(port);
-console.log(`Server running on port ${port}`);
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
