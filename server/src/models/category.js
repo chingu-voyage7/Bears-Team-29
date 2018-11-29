@@ -6,10 +6,12 @@ const CategorySchema = new Schema(
       type: String,
       required: true,
     },
-    parentId: {
-      type: Schema.Types.ObjectId,
-      ref: 'Category',
-    },
+    children: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Category',
+      },
+    ],
   },
   {
     timestamps: true,
