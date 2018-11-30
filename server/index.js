@@ -1,5 +1,12 @@
 require('babel-register')({
-  presets: ['env'],
+  presets: [
+    [
+      'env',
+      {
+        targets: {node: 'current'},
+      },
+    ],
+  ],
 });
 
 module.exports = require('./src/app');
