@@ -60,8 +60,8 @@ const EditCategory = ({name, description, products, handleChange, handleEdit}) =
 		 variant="contained"
 		 size="small"
 		 >
-		Send
-			<Icon>send</Icon>
+		Save
+			<Icon>save</Icon>
 		</StyledButton>		
 	</Form>
 )
