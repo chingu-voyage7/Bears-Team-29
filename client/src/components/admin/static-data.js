@@ -21,12 +21,12 @@ const categories = [{
 }, {
   "id": "a0113b10-9161-43a6-bff5-ac499bdaa8e7",
   "name": "Health",
-  "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+  "description": "Vestibulum ante ipsum primis in faucibus orci.",
   "products": 14
 }, {
   "id": "503fba9b-38c3-40e8-b230-7a91747f267f",
   "name": "Kids",
-  "description": "Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.",
+  "description": "Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
   "products": 10
 }, {
   "id": "b8e59639-b1e2-4c54-9700-f9c6fcd22869",
@@ -41,7 +41,7 @@ const categories = [{
 }, {
   "id": "ed155ac8-9efd-4b60-8e78-8992ded2355f",
   "name": "Electronics",
-  "description": "Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+  "description": "Nam nulla. Integer pede justo, lacinia eget.",
   "products": 5
 }, {
   "id": "75dca52a-12b9-4ea3-a4bb-9df54f18ac48",
