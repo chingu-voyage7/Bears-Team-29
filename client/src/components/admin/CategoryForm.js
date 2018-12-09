@@ -1,20 +1,43 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
 
 const Form = styled.form`
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width:700px;
+  	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 15px;
+	font-family: 'Roboto';
 `
 
-const StyledInput = styled.div`
+const StyledButton = styled(Button)`
+	width: 100px;
+	align-self: center;
 `
 
-const Submit = styled.input`
-`
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
+  input: {
+    display: 'none',
+  },
+});
+
 
 class CategoryForm extends Component {
 	state = {
 		name: "",
 		description: "",
-		products: 0
+		products: ""
 	}
 
 	handleChange = event => {
@@ -34,32 +57,47 @@ class CategoryForm extends Component {
 	}
 
 	render() {
+		const { name, description, products } = this.state;
 		return (
 			<Form onSubmit={this.handleSubmit}>
-				<h4>Add Category</h4>
-				<StyledInput>
-					<input id="name"
-						   name="name"
-						   type="text"
-						   onChange={this.handleChange}/>
-					<label htmlFor="name">Name</label>				
-				</StyledInput>
-				<StyledInput>
-					<input id="description"
-						   name="description"
-						   type="text"
-						   onChange={this.handleChange}/>
-					<label htmlFor="description">Description</label>				
-				</StyledInput>
-				<StyledInput>
-					<input id="products"
-						   name="products"
-						   type="number"
-						   onChange={this.handleChange}/>
-					<label htmlFor="products">Products</label>				
-				</StyledInput>
+				<p>Add Category</p>
+				<TextField
+		          required
+		          name="name"
+		          label="Name"
+		          value={name}
+		          onChange={this.handleChange}
+		          margin="normal"
+		          variant="filled"
+		        />
+				<TextField
+		          required
+		          name="description"
+		          label="Description"
+		          value={description}
+		          onChange={this.handleChange}
+		          margin="normal"
+		          variant="filled"
+		        />
+				<TextField
+				  required
+		          name="products"
+		          label="Products"
+		          value={products}
+		          onChange={this.handleChange}
+		          type="number"
+		          margin="normal"
+		          variant="filled"
+		        />
 
-				<Submit className="btn" type="submit" value="Add"/>
+				<StyledButton
+				 type="submit"
+				 variant="contained"
+				 size="small"
+				 >
+					Send
+					<Icon>send</Icon>
+				</StyledButton>
 			</Form>
 		);
 	}

@@ -5,7 +5,7 @@ import Categories from './Categories';
 import Sidenav from './Sidenav';
 
 const StyledAdmin = styled.div`
-	
+	font-family: 'Roboto';
 `
 
 class Admin extends Component {
