@@ -95,7 +95,7 @@ class CategoryForm extends Component {
 				 variant="contained"
 				 size="small"
 				 >
-					Send
+					Add
 					<Icon>send</Icon>
 				</StyledButton>
 			</Form>
