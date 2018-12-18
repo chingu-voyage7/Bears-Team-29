@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
+import axios from 'axios';
 
 const Form = styled.form`
 	background-color: white;
@@ -51,9 +52,17 @@ class CategoryForm extends Component {
 	}
 
 	handleSubmit = event => {
-		const { name, description, products} = this.state;
 		event.preventDefault();
-		alert(`Product: ${name}\nDescription ${description}\nProducts ${products}`)
+		const { name, description, products} = this.state;
+		axios.post('/api/categories', {
+			name,
+			description,
+			products
+		})
+		.then(result => {
+			this.props.handleModal();
+		})
+		.catch(err => console.log(err));
 	}
 
 	render() {

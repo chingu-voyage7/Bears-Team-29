@@ -6,6 +6,14 @@ const CategorySchema = new Schema(
       type: String,
       required: true,
     },
+    description: {
+      type: String,
+      required: true
+    },
+    products: {
+      type: Number,
+      required: true
+    },
     children: [
       {
         type: Schema.Types.ObjectId,
