@@ -11,11 +11,9 @@ import TableRow from '@material-ui/core/TableRow';
 
 import CategoryForm from './CategoryForm';
 import Category from './Category';
-import categories from './static-data';
 
 
 const StyledCategories = styled.div`
-	margin-left: 300px;
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
@@ -28,20 +26,6 @@ const Title = styled.h1`
 	margin: 15px 0 0 0;
 	padding: 0;
 	font-weight: normal;
-`
-
-const CategoriesList = styled.table`
-	display: grid;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-`
-
-const Row = styled.tr`
-	display: grid;
-	grid-template-columns: 100px 500px 100px 50px;
-
 `
 
 const AddButton = styled.div`
@@ -57,7 +41,10 @@ class Categories extends Component {
 	handleModal = () => {
 		const { open } = this.state;
 
-		if(open) this.setState({ open: false });
+		if(open) {
+			this.props.updateCategories()
+			this.setState({ open: false });
+		}
 		else {
 			this.setState({ open: true });
 		}
@@ -66,6 +53,7 @@ class Categories extends Component {
 
 	render(){
 		const { open } = this.state;
+		const { categories } = this.props;
 		return (
 			<StyledCategories>
 				<Title>Categories</Title>
@@ -80,9 +68,15 @@ class Categories extends Component {
 					</TableHead>
 					<TableBody>
 						{
+							categories === null || categories === []
+							?
+							<TableRow>
+								<TableCell>Please add categories</TableCell>
+							</TableRow>
+							:
 							categories.map(category => (
 								<Category
-								 key={category.id}
+								 key={category._id}
 								 id={category.id}
 								 name={category.name}
 								 description={category.description}
@@ -104,7 +98,7 @@ class Categories extends Component {
           		 aria-describedby="simple-modal-description"
 				 open={open}
 				 onClose={this.handleModal}>
-					<CategoryForm/>
+					<CategoryForm handleModal={this.handleModal}/>
 				</Modal>
 			</StyledCategories>
 		)
