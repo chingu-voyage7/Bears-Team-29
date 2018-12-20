@@ -48,22 +48,22 @@ const Header = (props) =>{
 	      <LogoLink to="/">{img}</LogoLink>
 
         <div>
-	         <Button href="/" >
+	         <Button href="/home" >
 		        Home
 		     </Button>
-		     <Button href="/shop" >
+		     <Button href="/home/shop" >
 		        Shop
 		     </Button>
-		     <Button href="/sale" >
+		     <Button href="/home/sale" >
 		        Sale
 		     </Button>
-		     <Button href="/feature" >
+		     <Button href="/home/feature" >
 		        Feature
 		     </Button>
-		     <Button href="/about" >
+		     <Button href="/home/about" >
 		        About us
 		     </Button>
-		     <Button href="/contactus" >
+		     <Button href="/home/contactus" >
 		        Contact us
 		     </Button>
 		</div>

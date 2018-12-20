@@ -6,9 +6,9 @@ import ContactUs from './ContactUs';
 
 const Main = () =>(
 	<Switch>
-		<Route exact path="/" component={ HomePage } />
-		<Route exact path="/about" component={ AboutUs } />
-		<Route exact path="/contactus" component={ ContactUs } />
+		<Route exact path="/home" component={ HomePage } />
+		<Route path="/home/about" component={ AboutUs } />
+		<Route path="/home/contactus" component={ ContactUs } />
 	</Switch>
 	);
 export default Main;
